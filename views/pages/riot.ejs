@@ -1,0 +1,25 @@
+<html>
+<%- contentFor('riot') %>
+	<title>API Fun</title>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="/riot.css">
+	</head>
+
+	<body>
+		<p>Riot Web App</p>
+		<p>Summoner Name:
+			<form action="/riot/submit" method="post">
+				<input type="text" name="summoner_name">
+				<button type="submit">Submit</button>
+			</form>
+		</p>
+		<p>Results:
+			<% if (typeof output != "undefined") { %>
+				<%= output %>
+					<% } %>
+		</p>
+		</div>
+	</body>
+
+</html>
